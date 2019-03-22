@@ -16,6 +16,7 @@ public class PushController {
 
     @GetMapping(path = "/sp")
     public String serviceWithPush(HttpServletRequest request, PushBuilder pushBuilder) {
+        // PushBuilder pushBuilder = request.newPushBuilder();
         System.out.println("pushBuilder is " + pushBuilder);
         if (null != pushBuilder) {
             pushBuilder.path("/scenery.jpg").push();
